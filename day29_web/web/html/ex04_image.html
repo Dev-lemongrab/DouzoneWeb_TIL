@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> tag - table , image </title>
+</head>
+<body>
+<!-- 상대경로 -->
+<!--  <img alt="우리집" src="house.gif" width="100%"/>-->
+<img alt="우리집" src="../images/house.gif" width="100%"/>
+<a href = "ex02_tag.html">
+	<img alt="우리집" src="../images/house.gif" width="100%"/>
+</a>
+<!-- 절대경로 -->
+<img alt="우리집" src="WEB-INF/images/Flowser2.jpg" width="100%"/>
+
+
+<p><hr><p>
+	<p>frame 속성의예입니다.</p>
+
+	<table frame="hsides" border="3">
+		<tr>
+			<td>First row</td>
+		</tr>
+	</table>
+	<br />
+	<table frame="vsides" border="3">
+		<tr>
+			<td>First row</td>
+		</tr>
+	</table>
+
+	<p>rule 속성은Internet Explorer에서는 적용되지않을수있습니다.</p>
+
+	<p>다음은rule 속성의예입니다.</p>
+	<p>Table with rules="rows":</p>
+	<table rules="rows"><!-- Firefox, Oper 잘 나옴 -->
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+
+	<p>Table with rules="all":</p>
+	<table rules="all">
+		<tr>
+			<th>Month</th>
+			<th>Savings</th>
+		</tr>
+		<tr>
+			<td>January</td>
+			<td>$100</td>
+		</tr>
+	</table>
+
+</body>
+</html>
+
+<p>frame 속성의예입니다.</p>
+
+<table frame="hsides" border="3">
+	<tr>
+		<td>First row</td>
+	</tr>
+</table>
+<br />
+<table frame="vsides" border="3">
+	<tr>
+		<td>First row</td>
+	</tr>
+</table>
+
+<p>rule 속성은Internet Explorer에서는 적용되지않을수있습니다.</p>
+
+<p>다음은rule 속성의예입니다.</p>
+<p>Table with rules="rows":</p>
+<table rules="rows">
+	<tr>
+		<th>Month</th>
+		<th>Savings</th>
+	</tr>
+	<tr>
+		<td>January</td>
+		<td>$100</td>
+	</tr>
+</table>
+
+<p>Table with rules="all":</p>
+<table rules="all">
+	<tr>
+		<th>Month</th>
+		<th>Savings</th>
+	</tr>
+	<tr>
+		<td>January</td>
+		<td>$100</td>
+	</tr>
+</table>
+
+</body>
+</html>
