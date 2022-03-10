@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex08_standard.html </title>
+
+<!-- <style type="text/css">
+	span .accent {
+		font-size: 20px;
+		color: red;
+		font-weight: bold;
+	}
+	
+	p em { 
+		color: blue; 
+		background-color: purple;
+	}
+	
+	body, div {
+		background-color: aqua;
+		text-align: center;
+	}
+	#multi {  color:  orange; }
+</style>  -->
+
+<!-- file 로 등록 했을 경우  -->
+<link rel="stylesheet" href="../css/style.css" type="text/css">
+</head>
+<!-- <body bgcolor="yellow"> -->
+<body>
+선택자 div 를 <div id="multi"><em>여러개<em></em></div> 있을 경우
+선택자 p 를 <p class="accent"><em>여러개<em></em></p> 있을 경우
+<p>
+	이제 <span class="accent"><em>웹표준<em></em></span>의 
+	<div>역할</div>은 아주  <span class="accent">중요</span>합니다.
+</p>
+</body>
+</html>
+
+<!-- 
+ >> css 선택자 
+
+1) inline
+   <img src="../images/1.jpg" style="border: 3px solid; ">
+  <img src="Flower2.jpg" style="속성: 값; 속성: 값;..... ">
+ 2) internal
+ 3) external  <---- file.css
+ css 외부 파일 링크 
+  <link rel="stylesheet"  href="../css/myStyle.css"  type="text/css">
+
+   선택자 { 속성: 값; 속성: 값; ..... }
+   선택자, 선택자2, 선택자3... { 속성: 값; 속성: 값; ..... }
+   선택자 서브엘리먼트 { 속성: 값; 속성: 값; ..... }
+   p  em { 속성: 값; 속성: 값; ..... }
+   div  span { 속성: 값; 속성: 값; ..... }
+
+   .className { 속성: 값; 속성: 값; ..... }
+   ex) .red { color : red; } 
+   선택자.className { 속성: 값; 속성: 값; ..... }
+   ex) p.blue { 속성: 값; 속성: 값; ..... }
+
+
+   #idName { 속성: 값; 속성: 값; ..... }
+   ex) #header { 속성: 값; 속성: 값; ..... }
+        div#id { 속성: 값; 속성: 값; ..... }
+
+ -->
+

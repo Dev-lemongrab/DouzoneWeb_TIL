@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" href="../css/regist.css" type="text/css">
+<style type="text/css">
+	#submit{
+		text-align: center;
+	}
+</style>
+</head>
+<body>
+<div>
+	<form>
+		<table class="regist">
+			<tr>
+				<th>ID</th><td><input type="id" name="id" id="id" placeholder="ID입력"></td>
+			</tr>
+			<tr>
+				<th>Password</th><td><input type="password" name="pwd" id="pwd" placeholder="Password입력"></td>
+			</tr>
+			<tr>
+				<th>Password확인</th><td><input type="password" name="pwdChk" id="pwdChk" placeholder="Password 재입력"></td>
+			</tr>
+			<tr>
+				<th>이름</th><td><input type="text" name="name" id="name" placeholder="이름입력"></td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td>
+					<select name="phone0" id="phone0">
+							<option>010</option>
+							<option>011</option>
+							<option>017</option>
+					</select>
+					&nbsp;-&nbsp;<input type="tel" name="phone1" id="phone1" placeholder="가운데">
+					&nbsp;-&nbsp;<input type="tel" name="phone2" id="phone2" placeholder="뒷자리">
+				</td>
+			</tr>
+			<tr>
+				<th>직업</th>
+				<td>
+					<select name="job" id="job">
+							<option>직업선택</option>
+							<option>웹 개발자</option>
+							<option>클라우드 개발자</option>
+							<option>게임 개발자</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<input type="radio" name="gender" id="gender">남 
+					<input type="radio" name="gender" id="gender">여
+				</td>
+			</tr>
+			<tr>
+				<th>취미</th>
+				<td>
+					<input type="checkbox" name="hobby" id="hobby"> 수영 
+					<input type="checkbox" name="hobby" id="hobby"> 게임 
+					<input type="checkbox" name="hobby" id="hobby"> 영화감상 
+					<input type="checkbox" name="hobby" id="hobby">	독서 				
+				</td>
+			</tr>
+			<tr>
+				<th>자기소개</th>
+				<td>
+					<textarea name="Introduce" cols="50" rows="10" id="Introduce"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" id="submit"><input type="submit"></td>
+			</tr>
+		</table>
+	</form>
+	</div>
+</body>
+</html>
