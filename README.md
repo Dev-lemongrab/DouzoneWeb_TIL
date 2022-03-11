@@ -132,12 +132,12 @@
 
 ## JS Basic
     
-    - 작업하는 페이지를 의미하는 document로 시작해서 접근 지정 
-    - document.getElementById('#id') : 해당 작업페이지의 해당id의 태그 값을 불러온다.
-    - .innerHTML : 지정된 태그안의 html 
-    - .innerText : 저정된 태그안의 글씨
-    - parseInt(변수) : int로 변경해준다.
-    - 사용예시
+- 작업하는 페이지를 의미하는 document로 시작해서 접근 지정 
+- document.getElementById('#id') : 해당 작업페이지의 해당id의 태그 값을 불러온다.
+- .innerHTML : 지정된 태그안의 html 
+- .innerText : 저정된 태그안의 글씨
+- parseInt(변수) : int로 변경해준다.
+- 사용예시
     
    
 ```html
