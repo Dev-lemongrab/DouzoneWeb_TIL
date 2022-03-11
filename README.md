@@ -131,6 +131,7 @@
         - :focus : 한번 활성화 시키면 계속(다음 클릭 전까지 활성화)
 
 ## JS Basic
+    
     - 작업하는 페이지를 의미하는 document로 시작해서 접근 지정 
     - document.getElementById('#id') : 해당 작업페이지의 해당id의 태그 값을 불러온다.
     - .innerHTML : 지정된 태그안의 html 
@@ -138,16 +139,17 @@
     - parseInt(변수) : int로 변경해준다.
     - 사용예시
     
-   ```html
+   
+```html
         <span id="countSpan">0</span> 번 클릭 &nbsp; &nbsp;
         <input type="button"  value="Click"  onclick="countIncrease()">
-   ```
-   ```javascript
+```
+```javascript
    function  countIncrease() {
                 var spanObj = document.getElementById('countSpan');
                 spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
             }
-   ```
+```
     
 
        
