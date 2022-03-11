@@ -3,7 +3,7 @@
 
 ## HTML Basic
 참고사이트 : [w3schools](https://www.w3schools.com/)
--  이클립스 html Template 만들기<br>
+-  이클립스 html Template 만들기
 이클립스 preference -> web -> Templates -> new -> 원하는 html구조 입력 -> cotext를 NEW HTML로 해주기 -> apply<br>
 
 > 웹표준을 지키기 위해서는  

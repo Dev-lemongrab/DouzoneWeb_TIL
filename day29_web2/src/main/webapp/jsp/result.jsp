@@ -3,16 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>입력결과 창</title>
+<meta charset="UTF-8" >
+<title>입력 결과 창</title>
 </head>
 <body>
-	<%
-		request.setCharacterEncoding("UTF-8");
-		String name = request.getParameter("name"); 
-		String pass = request.getParameter("pwd");
-		
-		out.print(name + "님 반갑습니다."  + pass);	
-	%>
+<%
+	 request.setCharacterEncoding("UTF-8");   // euc-kr
+	 String name = request.getParameter("name");
+	 String pass = request.getParameter("pwd");
+	
+	 out.print(name +"님 안녕하세요." + ", " + pass);
+%>
 </body>
 </html>

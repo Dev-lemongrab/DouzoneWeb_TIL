@@ -1,19 +1,12 @@
 @charset "UTF-8";
 
-.accent{
-		font-size:20px;
-		color:red;
-		font-weight:bold;
-	}
-	
+.accent {
+	font-size: 35px;
+	color: orange;
+	font-weight: bold;
+}
+
 body, div {
-	background: aqua;
+	background-color: aqua;
 	text-align: center;
 }
-
-
-p em {
-	color: blue;
-	background-color: purple;
-}
-#multi {color :orange;}

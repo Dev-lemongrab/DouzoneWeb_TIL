@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex15_js.html </title>
+
+<script type="text/javascript">
+	window.onload = function() {
+		/* alert("innerHTML : " + document.body.innerHTML +'\n'
+				   + "innerText : " + document.body.innerText ); */
+		
+		//const
+		//let
+		var list ='';
+		list += "<ul>";
+		list += "<li>Hello</li>";
+		list += "<li>Hi</li>";
+		list += "<li>Good-By</li>";
+		list += "</ul>";
+		
+		//document.body.innerHTML = list;
+		document.getElementById('div').innerHTML = list;
+		//alert(list);
+	}
+	
+	function  countIncrease() {
+		var spanObj = document.getElementById('countSpan');
+		spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
+	}
+
+</script>
+
+</head>
+<body>
+	<span id="countSpan">0</span> 번 클릭 &nbsp; &nbsp;
+	<input type="button"  value="Click"  onclick="countIncrease()">
+	<hr>
+	Good!!! <br />
+	<h5>미리 축하합니다~~~~~ 잘해봅시다.</h5>
+	
+	<div id="div"></div>
+</body>
+</html>
+
+
+
+
+

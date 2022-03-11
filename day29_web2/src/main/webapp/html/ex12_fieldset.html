@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title> ex12_fieldset.html </title>
+
+<style>
+fieldset {
+  background-color: #eee;
+}
+
+legend {
+  background-color: gray;
+  color: white;
+  padding: 5px 10px;
+}
+
+input {
+  margin: 5px;
+}
+</style>
+
+</head>
+<body>
+	<form action="/action_page.php">
+		  <fieldset>
+			    <legend>Personalia:</legend>
+				    <label for="fname">First name:</label>
+				    <input type="text" id="fname" name="fname"><br><br>
+				    
+				    <label for="lname">Last name:</label>
+				    <input type="text" id="lname" name="lname"><br><br>
+				    
+				    <label for="email">Email:</label>
+				    <input type="email" id="email" name="email"><br><br>
+				    <label for="birthday">Birthday:</label>
+				    <input type="date" id="birthday" name="birthday"><br><br>
+				    <input type="submit" value="Submit">
+		  </fieldset>
+		  <hr>
+		  <figure>
+			  <img src="../images/1.jpg" alt="Trulli" style="width:100%" >
+			  <figcaption >Fig.1 - 이미지 설명.</figcaption>
+		 </figure>
+				  
+		  
+	</form>
+</body>
+</html>
