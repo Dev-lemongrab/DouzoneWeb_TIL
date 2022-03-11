@@ -137,6 +137,7 @@
     - .innerText : 저정된 태그안의 글씨
     - parseInt(변수) : int로 변경해준다.
     - 사용예시
+    
    ```html
         <span id="countSpan">0</span> 번 클릭 &nbsp; &nbsp;
         <input type="button"  value="Click"  onclick="countIncrease()">
