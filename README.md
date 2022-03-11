@@ -60,6 +60,10 @@
         - textarea :
         - `<select>`태그와 `<option>`태그 사용해서 셀렉트 박스 만듦
         - radio, checkbox를 사용하면 선택 버튼을 만들 수 있다.
+    3. `<article>` 태그, `<aside>` 태그 등을 활용해 적절히 화면에 배치 가능
+    4. `<header>` 태그는 상단, `<footer>` 태그는 하단에 배치 가능
+    5. `<feildset>`태그를 사용하면 화면에 딱 맞춰진 상자를 만들어준다. 
+    6. `<feildset>`태그안에 `<legend>`태그를 넣으면 위에 제목을 만들어준다.
 
 ## CSS Basic
 
@@ -113,7 +117,42 @@
     3. li태그를 float : left -> 왼쪽 정렬해줌
     4. 이외에 a 태그를 hover, visited, active, focus 속성을 지정 해줍니다.
 
+- css종류
+    - opacity : 투명도 조절 0.0 ~ 1.0
+    - border : 테두리 속성
+    - margin : 선택한 것 외부와의 거리
+    - padding : 선택한 것 내부 content와의 거리
+    - float : 어디에 위치 시켜줄지
+    - text-decoration : none 옵션으로 a태그의 밑줄을 없앨 수 있다. 
+    - background ~ : 배경색 또는 그림에 다양한 옵션을 지정할 수 있다. 
+    - 가상셀렉터를 통해 다양한 상황에서 css적용이 가능
+        - :hover : 마우스가 올려져있을때
+        - :active : 활성화가 돼있을때만(클릭하는 순간 부터 떼는 순간 까지)
+        - :focus : 한번 활성화 시키면 계속(다음 클릭 전까지 활성화)
 
+## JS Basic
+    - 작업하는 페이지를 의미하는 document로 시작해서 접근 지정 
+    - document.getElementById('#id') : 해당 작업페이지의 해당id의 태그 값을 불러온다.
+    - .innerHTML : 지정된 태그안의 html 
+    - .innerText : 저정된 태그안의 글씨
+    - parseInt(변수) : int로 변경해준다.
+    - 사용예시
+    
+        ```html
+        <span id="countSpan">0</span> 번 클릭 &nbsp; &nbsp;
+        <input type="button"  value="Click"  onclick="countIncrease()">
+        ```
+        ```javascript
+
+        function  countIncrease() {
+                var spanObj = document.getElementById('countSpan');
+                spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
+            }
+        ```
+    
+
+       
+    
 
 
 
