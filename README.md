@@ -148,7 +148,7 @@
    function  countIncrease() {
                 var spanObj = document.getElementById('countSpan');
                 spanObj.innerHTML = parseInt(spanObj.innerHTML) + 1;
-            }
+            } 
 ```
     
 
