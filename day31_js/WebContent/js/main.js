@@ -1,3 +1,4 @@
+
 const a = 'Hello~';
 //split : 문자를 인수 기준으로 쪼개서 배열로 반환.
 //reverse : 배열을 뒤집기
@@ -19,6 +20,7 @@ boxEls.forEach(function(boxEl, index){
 
 
 console.log('==여기 새로 값 얻어오기/ 셋팅하기==');
+
 // HTML 요소(Element) 1개 검색/찾기
 const boxEl = document.querySelector('.box');
 console.log(boxEl.textContent);//

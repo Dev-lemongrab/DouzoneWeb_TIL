@@ -205,7 +205,6 @@
     7. 함수선언
         - function 예약어 사용
     8. 익명함수
-        -
         - 사용예시
         ``` javascript
             //익명 함수
@@ -214,6 +213,42 @@
             }
             world();
         ```
+- 자바스크립트 제어문
+    1. if
+        - 사용예시
+        ``` javascript
+            let isShow = true;
+            if(isShow) {
+                document.write('Show!! <br />');
+                console.log('show!!!');
+            } else {
+                document.write('123!! <br />');
+                console.log('123!!!');
+            }
+        ```
+- JS로 HTML태그를 가져와보기 
+    - `document.querySelector()` -> 1개를 검색해서 찾아온다.
+    - 갖고온 변수에 textContent라는 함수를 통해 텍스트 값을 넣어줄 수 있다. 
+    - addEventListener()를 통해 이벤트를 추가할 수도 있다. 
+    - classList.add() 혹은 remove()를 통해 클래스 이름도 추가할 수 있다.
+    - `document.querySelectorAll()` 코드를 쓰면 같은 이름의 여러 태그를 배열로 받아올 수 있다. 
+    -  forEach문을 곁들인 예제
+    ```javascript
+        const boxEls = document.querySelectorAll('.box');
+       
+        boxEls.forEach(function(boxEl, index){
+            boxEl.classList.add( `order-${index + 1}` );
+            console.log(index, boxEl);
+        });
+    ```
+
+- 다양한 함수
+    - split : 문자를 인수 기준으로 쪼개서 배열로 반환.
+    - reverse : 배열을 뒤집기
+    - join : 배열을 인수 기준으로 문자로 병합해 반환.
+
+
+
 
 
 
