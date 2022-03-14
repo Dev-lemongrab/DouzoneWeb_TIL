@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex16_js.html </title>
+<script type="text/javascript"src="../js/script2.js"></script>
+<script type="text/javascript">
+	window.onload = function() {
+		//alert('change');
+		let header1 = document.getElementById('header1');
+		header1.innerHTML='JAVASCRIPT';
+		document.getElementById('header2').innerHTML='oys';
+		
+		let div_tag = document.getElementsByTagName('div');
+		//document.write(div_tag);
+		div_tag[0].innerHTML = 'douzone 화이팅';
+		document.getElementsByTagName('p')[0].innerHTML='312312';
+		document.getElementsByClassName('change')[0].innerHTML=13579;
+	}
+	
+	
+</script>
+</head>
+<body>
+
+<h1 id = "header1"> Header-1</h1>
+<h1 id ="header2"> Header-2</h1>
+
+<div>tag name 으로 제어하기</div>
+<span class="change">class name으로 제어하기</span>
+
+<hr>
+브라우저 오픈
+<pre>
+</pre>
+<hr>
+<p>
+	표기법<br>
+	dash-case(kebab-case)<br>
+	snake_case<br>
+	camel_case<br>
+	ParcelCase<br>
+</p>
+	
+</body>
+</html>
+
+
+
+
+

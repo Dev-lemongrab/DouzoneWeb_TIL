@@ -151,9 +151,70 @@
             } 
 ```
     
-
-       
+- 참고 : 이클립스에서 JS자동완성 사용하기 
     
+    1. help -> marketplace에서 tern 검색
+    2. install
+    3. 프로젝트 우클릭 후 properties -> Client-side JavaScript -> Tern -> modules
+    4. Browser,  Browser Extension, jQuery, jQuery Extension, jQuery Ui 체크해주기!
+    ++ tern 에서 ECMAscript6로 바꿔주기 
+
+- 참고 : 표기법종류
+    1. dash-case(kebab-case)
+    2. snake_case
+    3. camelCase
+    4. ParcelCase
+
+- 자바스크립트 선언 변수 별 범위 및 중복 여부
+    1. var : 함수레벨 스코프/ 블록 내부에 선언되어도 외부 접근이 가능/ 중복선언가능
+    2. let, const : 블록레벨 스코프/ 중복선언 불가능
+
+- 각 변수 선언 & 초기화 & 할당
+    1. let & var
+        - IE브라우저 안됨.
+        - 선언 단계 : 변수 객체에 등록
+        - 초기화 단계 : 메모리할당 <- undefined로 초기화됨
+        - 할당 단계 : undefined로 초기화 된 변수에 값 할당.
+    2. const
+        - 값 변경 안됨.
+        - 꼭 선언과 초기화가 돼야함.
+
+- 다양한 자바스크립트 문법
+    1. 배열 : [] 안에 값을 하나씩 넣어서 초기화
+    2. Date : Date 객체 생성 후 날짜 쓰고 원하는 함수로 값 출력
+    3. 자료형
+        - 자료형의 선언이 필요 없이 저장되는 값에 따라 자동 형변환
+        - 앞 숫자가 0이면 8진수
+        - 앞 숫자가 0x이면 16진수
+    4. `` <- 이용하여 문자열과 변수를 동시에 적을 수 있다. 
+        - 예시 : 
+        ``` javascript
+            let comb = `반가워!! ${myName} !!!` 
+        ```        
+    5. Object : 객체데이터 
+        - 여러 데이터를 key : value 형태로 저장한다. 
+        - 예시 : 
+        ```javascript
+        let user = {
+                name : 'Yuna',
+                age : 80,
+                isValue : true
+               }
+        ```
+    6. 예약어 사용 불가
+    7. 함수선언
+        - function 예약어 사용
+    8. 익명함수
+        -
+        - 사용예시
+        ``` javascript
+            //익명 함수
+            let world = function () {
+                console.log("World~~~~~!!");
+            }
+            world();
+        ```
+
 
 
 

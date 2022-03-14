@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.accent {
+	font-size: 35px;
+	color: orange;
+	font-weight: bold;
+}
+
+body, div {
+	background-color: aqua;
+	text-align: center;
+}
