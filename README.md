@@ -247,6 +247,54 @@
     - reverse : 배열을 뒤집기
     - join : 배열을 인수 기준으로 문자로 병합해 반환.
 
+- 자바 스크립트 비교연산자 
+    - == 대신 ===, != 대신 !== 권장
+    - 자료형까지 비교한 값을 반환 하기 때문입니다.
+- 논리연산자 
+    1. && : and
+    2. || : or
+- 다른 js 파일에 있는 함수 import해서 쓰기 
+    ``` javascript
+        import rand from './getRandom.js'
+    ```
+- prompt는 입력 받을 수 있는 창을 열어줍니다.
+- eval()은 문자열을 수치로 계산할 수 있는 함수 입니다.
+- eval()을 활용한 계산기 만들기 코드 
+
+    ``` javascript
+        function clickNumber(data) {//숫자, 연산자를 매개변수로 받는다.
+		let  monitor = document.getElementById('monitor');
+		//monitor라는 id를 가진 태그에서 값을 갖고온다.
+		
+		if( data == 'clear' ) { //clear면 전부삭제
+			monitor.value = '';
+		} else if( data != '=' ) {//=이 아니면 계속 데이터를 모니터에 더해줍니다.
+			monitor.value += data;//ex)111+22*33...
+		} else { //= 이 들어오면 바로 반환...
+			monitor.value = eval(monitor.value)//그간 들어온 문자열을 수치계산
+		}
+	}
+    ```
+- arguments 객체 : 함수에 전달된 인수에 해당하는 Array 형태의 객체입니다.
+- 화살표 함수
+    - 전통적인 함수표현(function)의 간편한 대안입니다. 
+    - 제한점 
+        1. this나 super에 대한 바인딩이 없고, methods로 사용될 수 없습니다.
+        2. new.target키워드가 없습니다.
+        3. 일반적으로 스코프를 지정할 때 사용하는 call, apply, bind methods를 이용할 수 없습니다.
+        4. 생성자(Constructor)로 사용할 수 없습니다.
+        5. yield를 화살표 함수 내부에서 사용할 수 없습니다.
+    - 예시
+    ``` javascript
+        const mulArrow = (x, y) =>  x * y
+        console.log('mulArrow : ',  mulArrow(5, 4))
+        //expected output : 20
+    ```
+
+
+
+
+
 
 
 

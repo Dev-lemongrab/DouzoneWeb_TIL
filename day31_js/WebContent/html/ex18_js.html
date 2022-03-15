@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title> ex18_js.html </title>
+   <!-- type="module"  추가해준다 -->
+<script defer src="../js/day32.js"   type="module"  type="text/javascript"></script>
+<script type="text/javascript">
+	
+	function myNum() {
+		let z = "30";  // string
+		let x = 100, y = 200;
+		let su = eval("x+y");
+		
+		//alert(x + ", "+ y +", " + su);
+		let num = z; //+ 20; // string
+		let num2 = eval("2 + 5");
+		let su2 = eval("x + 50");
+		let su3 = 3+5;
+		let su4 = eval(8);
+		//alert(typeof num + ", "+ num2 +", " + su2+", " + su3+", " + su4);
+		
+		var result = su + su2;
+		//document.write(result);
+		document.getElementById('demo').innerHTML = result;
+		
+		let willEval = " ";
+		willEval += 'var number = 10; <br />' ;
+		willEval += 'alert(number); '; 
+		
+		//eval(willEval);
+		alert(willEval); 
+	}
+	
+	
+	let su = 123;
+	console.log(typeof 'Hello World!');
+	console.log(typeof su);
+	console.log(typeof undefined);
+	console.log(typeof null);
+	console.log(typeof {});
+	console.log(typeof []);
+	
+	/* function getType(data) {
+		return Object.prototype.toString.call(data);
+	} */
+	
+	function getType(data) {
+		return Object.prototype.toString.call(data).slice(8, -1);
+	}
+
+	console.log(getType(false))
+	console.log(getType(123));
+	console.log(getType({}));
+	console.log(getType([]));
+	
+/* 	function myFunction() {
+		window.open("ex16_js.html", "새창", "width=200, height=150" );
+	} */
+
+	/* let message = prompt("정수 입력 요망", "");
+	document.write(message);
+	console.log(message);
+	
+	let plus = eval(message) + 100;
+	console.log(plus); */
+	
+	function clickNumber(data) {
+		let  monitor = document.getElementById('monitor');
+		//alert(data);
+		
+		if( data == 'clear' ) {
+			monitor.value = '';
+		} else if( data != '=' ) {
+			monitor.value += data;   // 2, 3, 33, 500, 450
+		} else {
+			monitor.value = eval(monitor.value)
+		}
+	}
+	
+</script>
+</head>
+<!-- <body onload="myFunction()"> -->
+<body>
+<div class="box">
+		<!-- span tag 동적으로 3개 생성 하고, 사자-1,2,3 이름 텍스트 추가하기 -->
+</div>
+<hr>
+<ul>
+	
+</ul>
+<hr>
+	<input type="text" id="monitor"> <br />
+	<input type="button"   value="1"  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="2"  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="3"  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="+"  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="-"  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="%"  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="="  onclick="clickNumber(this.value)" /> 
+	<input type="button"   value="clear"  onclick="clickNumber(this.value)" /> 
+	
+<hr>
+
+
+
+브라우저 오픈<br />
+ <button onclick="myNum()">눌러봐</button>
+ <p id="demo"></p>
+
+<p>
+<a href="http://www.naver.com">Naver</a> <p />
+
+</body>
+</html>
