@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title> ex20_js.html </title>
+
+<script defer src="../js/day33.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//변수선언
+	var a = 10;  //반드시 초기화값 줘야한다.
+	
+	document.writeln('a = ' + a + '<br />'); // 10
+	document.writeln('typeof a = ' + typeof a + '<br />'); // number
+	document.writeln('isFinite(a) = ' + isFinite(a) + '<br />'); // true
+	document.writeln('isNaN(a) = ' + isNaN(a) + '<br />'); // false
+	
+	var b = 3 / 0;  // 불능
+	document.writeln('b = ' + b + '<br />');  // infinity
+	document.writeln('typeof b = ' + typeof b + '<br />'); // number
+	document.writeln('isFinite(b) = ' + isFinite(b) + '<br />'); // false
+	document.writeln('isNaN(b) = ' + isNaN(b) + '<br />'); // false
+	
+	//  + 연산자를 제외한 사칙 연산자는 피연산자에 문자열이 있을 경우 
+	// 숫자형으로 자동형변환 된다.
+	//var c = 5 + "7times" ;  // 문자형으로 자동 형변환  
+	//var c = 'abc' + 5 ; 
+	var c = 5 % "7times";  // + 연산 이외는 다 숫자(Number) 형으로 변환
+	document.writeln('c = ' + c + '<br />');  // NaN
+	document.writeln('typeof c = ' + typeof c + '<br />'); // number
+	document.writeln('isFinite(c) = ' + isFinite(c) + '<br />'); // false
+	document.writeln('isNaN(c) = ' + isNaN(c) + '<br />'); // true
+	
+	
+	function imageSize() {
+		if( backImg.style.pixelWidth < 500 ) {
+			backImg.style.pixelWidth += 3;
+			backImg.style.pixelHeight += 2;
+			window.setTimeout("imageSize()", 10)
+		}
+	}
+
+</script>
+ <style type="text/css">
+ 	table {
+ 		border: 1px solid black;
+ 		width: 700px;
+ 		align-content: center;
+ 	}
+ 	img { 
+ 		border: 0; 
+ 		width: 100px;
+ 		height: 100px;
+ 	}
+ </style>
+</head>
+<body onload=" imageSize()">
+<hr>
+브라우저 오픈 <p />
+<h1>head-1</h1>
+<table>
+	<tr><td>DouZone th2 미니 홈피</td>	</tr>
+	<tr>
+		<td>
+			<img id="backImg"  src="../images/house.gif" align="center" >
+		</td>
+	</tr>
+</table>
+<!-- <marquee direction="right" scrollamount="30">Your slide-in next goes here</marquee> -->
+</body>
+</html>

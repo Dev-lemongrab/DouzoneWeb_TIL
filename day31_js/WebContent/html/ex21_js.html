@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title> ex21_js.html </title>
+<script type="text/javascript">
+	var num = 10;  //숫자형
+	var str ='자바스크립트';  //문자형
+	
+	var point = { x : 300 , y : 500 }; //객체
+	
+	var arr = [ 1, 2, 3, 4 ];  // 배열
+	
+	var cars = new Array("Saab", "Volvo", "BMW");
+		
+	//함수
+	const plus = function(su1, su2) {
+		return su1 + su2;
+	}
+	
+	function plus2(x, y) {
+		document.write(x + y);
+	}
+	
+	const plus3 = (su1, su2 ) => su1 + su2;
+	
+	document.writeln('num : ' + num + '<br />');
+	document.writeln('str : ' + str + '<br />');
+	
+	document.writeln('point.x : '  + point.x + '<br />');
+	document.writeln('point["y"] : '  + point["y"] + '<br />');
+	
+	document.writeln('arr[0] : ' + arr[0] + '<br />');  // 1
+	document.writeln('arr[3] : ' + arr[3] + '<br />');  // 4
+	
+	document.writeln('plus : ' + plus + '<br />');  // 함수 원형이 텍스트로 출력됨
+	document.writeln('plus : ' + plus() + '<br />');  // NaN
+	document.writeln('plus(3, 5) : ' + plus(3, 5) + '<br />');   // 함수 호출
+	
+	document.writeln("\' ");
+	document.writeln("\\' ");
+	document.writeln("<br />");
+	document.writeln("\n");
+	document.writeln("\u03c0' ");
+	var str = 'sfjsdkjfksdjfkjsdf   rt34535 ,\n 4935893485934rekjtgkjg';  //    \n
+	document.writeln(str);  //  &nbsp;  역할을 한다
+	alert(str);  
+	alert("jfkdsfks1 \n dksfkfkf2 \ndkdkdkd38484 3");
+</script>
+</head>
+<body>
+
+</body>
+</html>

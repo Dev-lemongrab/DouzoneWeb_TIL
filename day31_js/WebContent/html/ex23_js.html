@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex23_js.html </title>
+<script type="text/javascript">
+
+	var calculator ;  // 초기화 X - undefined == false
+	// && 연산
+	calculator && document.writeln('calculator.plus(2,3) : ' + calculator.plus(2, 3));
+	
+	calculator = {  // 정의부 
+			plus : function(su1, su2) {
+				return su1 + su2;
+			}
+	}
+	// && 연산에서는 좌측 0, undefined, null, NaN, "" 이외의 값을 가지면 true로 평가됨
+	calculator && document.writeln('calculator.plus(2,3) : ' + calculator.plus(2, 3));
+
+	 // || 연산
+	 calculator.subtract || ( calculator.subtract = function(su1, su2) { return su1 - su2 ; } );
+	document.write("<br />");
+	calculator || document.writeln('calculator.subtract(2,3) : ' + calculator.subtract(2, 3));
+
+
+	
+	function makePerson(name, phone, addr) {
+		const person2 = {
+					name: name,
+					phone: phone,
+					addr: addr,
+					
+					info : function() {  // method
+						var list = '';
+						for(var key in this) {   
+							if( key != 'info') {
+								list += key + " : " + this[key] + "\n";
+							}
+						} // for end
+						alert(list);
+					}
+			};
+		return person2;
+	} // makePerson(name, phone, addr)  end
+	
+    var p = makePerson("강감찬", "0000", "서울시");
+	var p2 = makePerson("전두환", "8888", "경기");
+//	p.info();
+//	p2.info();
+	
+	let ps = [p, p2];
+	//ps.push(makePerson("kingsmile", "999", "seoul"));
+	//ps.push(makePerson("doyeon", "222", "busan"));
+	
+	for(var i in ps) {
+		//ps[i].info();
+	}
+
+
+   // object : { }
+	var person = {
+		/* 	constructor()
+			{
+				
+			} */
+			name: "홍길동",
+			phone: "010-9872-0202",
+			addr: "서울 서대문구 연희동",
+			
+			info : function() {  // method
+				alert("name : " + this.name + "\n"
+					+ "phone : " + this.phone +"\n"
+					+ "addr : " + this.addr 
+				);
+				
+			// for(초기값; 조건; 증감식) { }
+				var list = '';
+				for(var key in this) {   // for in  ,  forEach( )
+					list += (key + " : " + this[key] + "\n")
+				} // for end
+				
+				alert(list);
+			} // info end		
+	};
+
+	//person.info();
+	person.name = '김연아';
+	console.log(person.name);
+	console.log(Object.values(person));
+	
+/* 	let ps = new Person();
+	ps.name = 'djfks'; */
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

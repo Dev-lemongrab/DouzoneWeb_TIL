@@ -1,10 +1,7 @@
 @charset "utf-8";
-
-/* @import url("test.css"); */
-
 body {
 	font: 14px 맑은 고딕;
-	/* background-image: url(../images/bg.png) ; */
+	/* background-image: url(bg.png); */
 }
 a img { 
 	border: none;
@@ -36,8 +33,7 @@ header {  /*  일반 태그  */
 
 #header {   /* id명 */
 	height: 280px;
-	margin-top: 35px;
-	padding-top: 20px;
+	margin-top: 0;
 	background-image: url(../images/bg.png);
 	background-repeat: no-repeat;
 	background-position: left top;
@@ -48,7 +44,7 @@ header hgroup{
 	top:120px;
 	left:600px;
 	color:#063;
-/*	background-color: rgba(0,0,0, 0.4); */
+/*	background-color:rgba(0,0,0,0.4); */
 } 
 hgroup h1{
 	font-size:3em;		
@@ -57,9 +53,8 @@ hgroup h1{
 }
 hgroup h2{
 	font-size:2em;
-	color:#FF0;	    /* rgb : red 0~255, green 0~255, blue 0~255 ,  16진수형태 : #FF FF FF  --> #FF0,  #FEA00C */
-	text-shadow: 0px 1px 1px #000;	
-
+	color:#FF0;	
+	text-shadow:0px 1px 1px #000;	
 }
 h1 {
 	  font-family: Arial, Helvetica, sans-serif;
@@ -100,6 +95,7 @@ h4 {
 		text-shadow:0px 2px 2px #000;
 		color:#FC0;
 }
+
 .sidebar1 {
 	float: right;
 	width: 200px;
@@ -112,18 +108,18 @@ h4 {
 
 .sidebar1 img {
 	margin-bottom: 5px;
-	border: 3px solid #F00;
+	border: 1px solid #CCC;
 	opacity:0.6; 
 	text-align:center;
 }
 
 .sidebar1 img:hover{
-	border: 3px solid #0FF;	
+	border:1px solid #000;	
 	opacity:1.0;
 }
 .content {
 	background-color: #FFFFFF;	
-	padding-top: 5px;
+	padding-top:5px;
 	padding-left:10px;
 	width: 720px;
 	float: left;
@@ -139,7 +135,7 @@ h4 {
 
 footer {
 	padding: 10px 0;
-	background-color:#0FF;
+	background-color:#030;
 	color:#fff;
 	text-align:center;
 	clear: both;
@@ -152,11 +148,3 @@ header, section, footer, aside, article, figure {
 	margin: 0 10px 15px 10px;
 	padding:0;	
 }
-
-.banner1 {
-	margin: 5px 20px 25px 10px;    /*  margin : 외부 여백 */
-	padding: 5px;	    						/* padding : 내부 여백 */
-}
-
-
-

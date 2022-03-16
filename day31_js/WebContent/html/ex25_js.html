@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex25_js.html </title>
+<script type="text/javascript">
+	let fruits = ['사과', '바나나'];
+	
+	fruits.forEach(function (item, index, array) {
+		  document.write(item, index + "<br />")
+		  document.write(array +"<hr />")
+	});
+	
+	let newLength = fruits.push('오렌지');
+	document.write(fruits + "<br /><p />")
+	
+	let a, b, rest;
+	[a, b] = [10, 20];
+	document.write(a +"<p />");
+	// expected output: 10
+	document.write(b +"<p />");
+	// expected output: 20
+	[a, b, ...rest] = [10, 20, 30, 40, 50];
+	document.write(rest +"<p /><hr />");
+	// expected output: Array [30,40,50]
+	({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40});
+	console.log(a); // 10
+	console.log(b); // 20
+	console.log(rest); // {c: 30, d: 40}
+		
+</script>
+</head>
+<body>
+	구조 분해 할당<hr>
+	<form action="" >
+		<input type="text"  required  placeholder="힌트">
+		<input type="submit"  value="전송"   >
+	</form>
+</body>
+</html>
+
+
+
+
+

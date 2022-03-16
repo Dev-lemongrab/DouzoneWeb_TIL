@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex24_js.html </title>
+<script type="text/javascript">
+
+	function  user(first, last) {
+		this.firstName = first;
+		this.lastName = last;
+	}
+	
+	const kingsmile = new user('DoYeon', 'Lee');
+	document.write(kingsmile);
+	
+	const list = [];
+	const obj = {};
+
+	var arr = [ 1, '김연아', '010-9872-0202', true, new Date(), [10, 20, 30] ];
+
+	document.writeln('typeof arr[0] : ' + typeof arr[0] + '<br />');
+	document.writeln('typeof arr[1] : ' + typeof arr[1] + '<br />'); 
+	document.writeln('typeof arr[2] : ' + typeof arr[2] + '<br />'); 
+	document.writeln('typeof arr[3] : ' + typeof arr[3] + '<br />'); 
+	document.writeln('typeof arr[4] : ' + typeof arr[4] + '<br />'); 
+	document.writeln('typeof arr[5] : ' + typeof arr[5] + '<br />'); 
+	document.write("<br />");
+	
+	document.writeln('arr[4] instanceof Date : ' + (arr[4]  instanceof Date ) + '<br />');  //
+	document.writeln('arr[4].constructor : ' + (arr[4].constructor) + '<br />');  // 
+	
+	document.writeln('arr[5] instanceof Array : ' + (arr[5]  instanceof Array ) + '<br />');  //
+	document.writeln('arr[5].constructor : ' + (arr[5].constructor) + '<br />');  // 
+	document.write("<br />");
+	
+	document.writeln("arr: " + arr + "<br />");
+	document.write("<br />");
+	document.writeln("delete arr[2] : " + delete arr[2] + "<br />");  // true
+	document.writeln("arr[2]: " + arr[2] + "<br />");  // undefined
+	document.write("<br />");
+	document.writeln("arr: " + arr + "<br />");
+	document.write("<br />");
+	
+	var point = {
+			x : 20,
+			y : 30,
+			toString : function() {
+				return "{ x : " + this.x + " , y: " + this.y + "}" ; 
+			}
+	};
+	
+	document.writeln('point: ' + point + '<br />');
+	document.writeln('delete point.y : ' + delete point.y + '<br />');
+	document.writeln('point: ' + point + '<br />');
+	
+	document.writeln('delete point.toString : ' + delete point.toString + '<br />');
+	document.writeln('point: ' + point + '<br />');
+	document.write("<br />");
+</script>
+</head>
+<body>
+
+</body>
+</html>
