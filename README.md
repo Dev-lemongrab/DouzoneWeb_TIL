@@ -1,5 +1,10 @@
 # DouzoneWeb_TIL
 
+### 📖 목차
+[1. HTML Basic](#HTML-Basic)
+[2. CSS Basic](#CSS-Basic)
+[1. JavaScript Basic](#JS-Basic)
+
 
 ## HTML Basic
 참고사이트 : [w3schools](https://www.w3schools.com/)
@@ -242,7 +247,7 @@
         });
     ```
 
-- 다양한 함수
+- 문자열 함수
     - split : 문자를 인수 기준으로 쪼개서 배열로 반환.
     - reverse : 배열을 뒤집기
     - join : 배열을 인수 기준으로 문자로 병합해 반환.
@@ -290,6 +295,92 @@
         console.log('mulArrow : ',  mulArrow(5, 4))
         //expected output : 20
     ```
+- 타이머 함수
+    1. setTimeout(함수, 시간) : 일정 시간 후 함수 실행
+        - 코드
+        ```javascript
+            function timeout(callback) {
+            setTimeout(()=> {
+                    console.log('Hello JS!!')
+                    callback()
+                }, 3000)
+            }
+        ```
+
+
+    2. setInterval(함수, 시간) : 시간 간격마다 함수 실행
+    3. clearTimeout() : 설정된 Timeout 함수를 종료
+    4. clearInterval() : 설정된 Interval 함수를 종료
+
+- 유사 배열(Array-Like Object)
+    > 이름 그대로 배열과 유사(類似)한 객체를 유사 배열, 영어로는 Array-Like Object 라고 부릅니다.
+    하지만 마냥 모양만 비슷하다고 해서 모두 유사 배열이라고 부르진 않는데요.<br>
+    유사 배열에도 최소한 갖춰야 할 조건과 특징들이 있다.
+    
+    1. 숫자 형태의 indexing이 가능하다.
+    2. length 프로퍼티가 있다.
+    3. 배열의 기본 메소드를 사용할 수 없다.
+    4. Array.isArray(유사배열)은 false다.
+    5. 코드
+        - ```javascript
+            function makePerson(name, phone, addr) {
+		            const person2 = {
+                        name: name,
+                        phone: phone,
+                        addr: addr
+					    }
+                    };
+                return person2;
+            }
+            ```
+        > 주의사항: 유사 배열은 다양하다!<br>
+        > 참고사이트<br>
+            > 1. [developer.mozilla](https://developer.mozilla.org)<br>
+            > 2. [developer.mozila2](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+
+        > 다양한 스타일 가이드 및 코딩컨벤션<br>
+        > 1. [Airbnb의 자바스크립트 스타일 가이드](https://github.com/ParkSB/javascript-style-guide)<br>
+        > 2. [Google의 자바스크립트 스타일 가이드](https://google.github.io/styleguide/jsguide.html)<br>
+        > 3. [w3schools.com 스타일 가이드](https://www.w3schools.com/js/js_conventions.asp)<br>
+        > 4. [StandardJS](https://standardjs.com/rules-kokr.html)<br>
+        > 5. [Idiomatic.JS](https://github.com/rwaldron/idiomatic.js/tree/master/translations/ko_KR)<br>
+        📌  [유창한 자바스크립트(Eloquent JavaScript) : 해외 서적](https://eloquentjavascript.net/03_functions.html)<br>
+
+- WEB예제 - 스타벅스
+    1. favicon 설정하기 : title 로고 설정 해주는 것. 이름을 favicon으로 해야한다.
+        - 코드
+            ``` javascript
+                <link rel="shortcut icon" href="favicon.ico" /> 
+                <link rel="icon"  href="./favicon.png" />       
+             ```
+    2. 오픈그래프 설정하기 
+        - 링크 미리보기 해주는 것.
+        - 구성
+            1. og:url(링크될 URL) 
+            2. og:type(웹인지 앱인지 타입 지정)
+            3. og:title(해당 링크의 제목)
+            4. og:description(설명)
+            5. og:image(썸네일 이미지)
+                ```javascript
+                    <!-- 오픈 그래프(The Open Graph protocol) -->
+                        <meta property="og:type" content="website" />
+                        <meta property="og:site_name" content="KOSA" />
+                        <meta property="og:title" content="실습 - Starbucks Coffee Korea" />
+                        <meta property="og:description" content="스타벅스는 세계에서 가장 큰 다국적 커피 전문점으로, 64개국에서 총 23,187개의 매점을 운영하고 있습니다." />
+                        <meta property="og:image" content="./images/starbucks_seo.jpg" />
+                        <meta property="og:url" content="https://starbucks.co.kr" />
+                ```
+    3. reset css 설정하기 
+        - 각 브라우저 마다 기본 스타일이 다르기 때문에 기본설정을 맞춰줘야 한다. 
+        - jsdelivr라는 사이트에서 쉽게 구할 수 있다.
+        - 코드
+            ```javascript
+            <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+            ```
+        
+
+
+
 
 
 

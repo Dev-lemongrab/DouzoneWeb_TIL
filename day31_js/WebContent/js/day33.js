@@ -26,7 +26,10 @@ function timeout(callback) {
 }
 
 timeout(() => { 
-	console.log('Done')
+	console.log('Done')//callback 함수를 인수로 받는거네 
+})
+timeout(() => {
+	console.log('Done2')
 })
 
 /*
