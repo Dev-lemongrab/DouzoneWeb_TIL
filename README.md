@@ -281,6 +281,7 @@
 	}
     ```
 - arguments 객체 : 함수에 전달된 인수에 해당하는 Array 형태의 객체입니다.
+
 - 화살표 함수
     - 전통적인 함수표현(function)의 간편한 대안입니다. 
     - 제한점 
@@ -346,6 +347,13 @@
         > 5. [Idiomatic.JS](https://github.com/rwaldron/idiomatic.js/tree/master/translations/ko_KR)<br>
         📌  [유창한 자바스크립트(Eloquent JavaScript) : 해외 서적](https://eloquentjavascript.net/03_functions.html)<br>
 
+수요일까지
+
+
+
+
+
+
 - WEB예제 - 스타벅스
     1. favicon 설정하기 : title 로고 설정 해주는 것. 이름을 favicon으로 해야한다.
         - 코드
@@ -377,6 +385,56 @@
             ```javascript
             <link rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
             ```
+    4. 폰트 설정해주기
+    5. 아이콘 
+        - google matariel icon 검색
+
+    6. Section - Notice 
+        - 바 형태로된 공지사항이 일정시간마다 변경되도록 자바스크립트를 설정해줘야 합니다.
+        - 바(div)를 50% 50% 해서 한 화면에 배치해줍니다.
+        - swiper를 사용할 것입니다.
+            - swiper-container
+            - swiper-wrapper
+            - swiper-slide
+            - 참고<br/>
+                [swiper만들기](https://velog.io/@yeonbee/%EA%B5%AD%EB%B9%84%EC%88%98%EC%97%8510%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C%EB%A7%8C%EB%93%A4%EA%B8%B0-Swiper)
+         
+    7. 유튜브 
+
+## jQuery Basic
+
+    - jQuery를 넣는 방법
+        1. file 
+            - 용량을 많이 차지할 수 있다.
+            - 네트워크 연결이 끊겨도 사용가능하다.
+        2. cdn 
+            - 네트워크가 연결돼 있어야 한다.
+            - IE는 버렸으니까 쓰지 않는게 좋다.
+            - cdn은 구글 검색한뒤에 원하는 버전으로 선택하면 된다. 
+    - jQuery 선택자 
+        - $()안에 넣으면 된다. 
+    - 다양한 사용구문 
+        - $().css
+        - $().value
+    - 1. chaining방식
+        - 코드
+            ``` javascript
+                $('.welcome').html('hello world! Douzoneth2!')
+                .css('background-color', 'yellow')
+                .on('click', function(e) {
+                    let clicked=e.target;
+                    $(this).css('background-color','aqua');
+                })
+            ```
+    - document 준비되면 바로 실행되게 하는 자바스크립트 함수 
+        1. $(document).ready(function(){}
+        2. document.addEventListener('DOMContentLoaded', function() {}
+        3. 
+
+
+
+
+
         
 
 
