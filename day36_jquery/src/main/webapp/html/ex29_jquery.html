@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex29_jquery.html</title>
+<!-- CDN 방식 -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script  type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function() {
+		document.getElementsByTagName('h1')[0].style.color = 'blue';
+	});	 
+	
+	//$(document).ready(function() {  // document가 다 준비가 되면 갖고와서 실행해라
+	$( function() {  
+		$('h1').css('color', 'skyblue');
+		// #demo .inner 글자에 언더라인
+		//$('#demo .inner').css('text-decoration', 'underline');
+		// 아래쪽에 5px 두께 실선 red
+		//$('#demo .inner').css('border-bottom', '5px solid red');
+		// 기울기
+		//$('#demo .inner').css('transform', 'rotate(45deg)');
+		//$('#demo .inner').css('opacity', 0.5); // px ' '생략가능, 단위가 % -> ' '
+		/*
+		$('#demo .inner').css( { 'text-decoration': 'underline', 
+										'border-bottom':'5px solid red',
+										'transform':'rotate(175deg)',
+										'opacity': .3 } );
+		*/
+	
+		/*
+		$('#demo .inner').css( { textDecoration: 'underline', 
+											borderBottom :'5px solid blue',
+											//transform: 'rotate(175deg)',
+											opacity : .3 } );
+		
+		*/
+		
+		// $('선택자').on('이벤트 종류', 할일);
+		/*
+		$('#demo').on('mouseover', function() {
+			$('.inner').css( 'background' ,'green');
+		});
+		$('#demo').on('mouseout', function() {
+			$('.inner').css( 'background' ,'white');
+		});
+		*/
+		/*
+		$('#demo').on('mouseover', function() {
+			$('.inner').css( 'background' ,'green');
+		})
+		.on('mouseout', function() {
+			$('.inner').css( 'background' ,'white');
+		});
+		*/
+		
+		$('#demo').mouseover( function() {
+			$('.inner').css( 'background' ,'yellow').html('글자 변경');
+		})
+		.mouseout( function() {
+			$('.inner').css( 'background' ,'white').html('Create jQuery Test');
+		});
+		
+		// 여러 선택자에 이벤트 추가하기 
+		$('#demo, h1').mouseover( function() {
+			//$('.inner, h1').css( 'background' ,'yellow').html('글자 변경');
+			$(this).css( 'background' ,'yellow').html('글자 변경');
+		})
+		.mouseout( function() {
+			//$('.inner, h1').css( 'background' ,'white').html('Create jQuery Test');
+			$(this).css( 'background' ,'white').html('Create jQuery Test');
+		});
+	});
+	
+</script>
+
+</head>
+
+<body>
+	<header>
+		<h1>jQuery Sample</h1>
+	</header>
+	<div id="demo">
+		<h2 class="inner">Create jQuery Test</h2>
+	</div>
+	
+</body>
+</html>

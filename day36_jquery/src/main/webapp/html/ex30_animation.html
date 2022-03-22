@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex30_animation.html 효과, 애니메이션 </title>
+
+<style type="text/css">
+	div {
+		margin: 3px;
+		width: 80px;
+		height: 80px;
+		background: #0f0; 
+		border: 1px solid green;
+	}
+</style>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script  src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" ></script>
+  
+<script type="text/javascript">
+	$(function() {
+		$(' input[type="button"] ').on('click', function(e){
+				let  $target =$(e.target);
+				switch($target.attr('id')) {
+					case 'fadeout' : $('#target').fadeOut('slow'); break;
+					case 'fadein' : $('#target').fadeIn('slow'); break;
+					case 'hide' : $('#target').hide(); break;
+					case 'show' : $('#target').show(); break;
+					case 'slidedown' : $('#target').hide().slideDown('slow'); break;
+					case 'slideup' : $('#target').slideUp('slow'); break;
+					case 'mix' : $('#target').fadeOut('slow')
+													.fadeIn('slow').delay(1000).slideUp()
+													.slideDown('slow', function () {
+														alert('마칩니다!!!')
+													}); 
+								break;
+				} // swtich end
+		} ); //  ' input[type="button"] ' end
+		
+		$('#run').on('click', function() {
+			$('#target').animate({
+				width: "300px",
+				opacity: 0.4,
+				marginLeft: "50px",
+				fontSize: "30px",
+				//border: "10px solid pink",
+				borderWidth : "10px",
+				borderColor: "red",
+				//transition: "border-width 0.6s swing"
+			}, 3000);
+		});
+	}); 
+</script>
+</head>
+<body>
+	<button id="run"> &raquo; Run</button>
+	<!-- <div  id="block">DoZone 화이팅!!</div> -->
+	
+	<input type="button"  id="fadeout"  value="fade out" />
+	<input type="button"  id="fadein"  value="fade in" />
+	<input type="button"  id="hide"  value="hide" />
+	<input type="button"  id="show"  value="show" />
+	<input type="button"  id="slidedown"  value="slide down" />
+	<input type="button"  id="slideup"  value="slide up" />
+	<input type="button"  id="mix"  value="mix" />
+	
+	<div id="target">
+		여기!!
+	</div>
+	
+</body>
+</html>

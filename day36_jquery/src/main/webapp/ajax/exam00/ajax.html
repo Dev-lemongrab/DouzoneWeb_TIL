@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title> ajax.html </title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script type="text/javascript">
+	//$(document).ready(function() {
+	$(function() {
+		$('#driver').click(function() {
+			$('#stage').load('test.html');
+		});
+	});
+</script>
+
+</head>
+<body>
+
+	<p> 버튼 클릭시 이곳에 jquery ajax 실행됩니다.</p>
+	<div  id="stage"  style="background-color: #cc0; " >
+		 	STAGE
+	</div>
+	
+	<input type="button"  id="driver"  value="Load Data" /> <br />
+	
+	여기가 재로드 되나요?
+	<br /> 확인하세요.
+</body>
+</html>
