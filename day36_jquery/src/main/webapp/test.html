@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>map</title>
+<style type="text/css">
+.mapContainer {
+    border: 3px solid black;
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    text-align: center;
+    margin: 5% 24%;
+}
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBybC_AzeJ2fCbA_6EM-ZBVm-PuS3R7tMo&callback=initMap&v=weekly" async></script>
+<script type="text/javascript">
+function initMap() {
+	  const map = new google.maps.Map(document.getElementById("map"), {
+	    center: { lat: 40.76, lng: -73.983 },
+	    zoom: 15,
+	    mapTypeId: "satellite",
+	  });
+
+	  map.setTilt(45);
+	}
+</script>
+</head>
+<body>
+<div class="container" style="text-align: center">
+	<script>
+	</script>
+	<h1>지도 API만들기</h1>
+</div>
+	<hr style="height: 10px; background-color: black">
+<div id="map" class="mapContainer" >
+	
+</div>
+
+</body>
+</html>
+

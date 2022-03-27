@@ -403,33 +403,52 @@
 
 ## jQuery Basic
 
-    - jQuery를 넣는 방법
-        1. file 
-            - 용량을 많이 차지할 수 있다.
-            - 네트워크 연결이 끊겨도 사용가능하다.
-        2. cdn 
-            - 네트워크가 연결돼 있어야 한다.
-            - IE는 버렸으니까 쓰지 않는게 좋다.
-            - cdn은 구글 검색한뒤에 원하는 버전으로 선택하면 된다. 
-    - jQuery 선택자 
-        - $()안에 넣으면 된다. 
-    - 다양한 사용구문 
-        - $().css
-        - $().value
-    - 1. chaining방식
-        - 코드
-            ``` javascript
-                $('.welcome').html('hello world! Douzoneth2!')
-                .css('background-color', 'yellow')
-                .on('click', function(e) {
-                    let clicked=e.target;
-                    $(this).css('background-color','aqua');
-                })
+- jQuery를 넣는 방법
+    1. file 
+        - 용량을 많이 차지할 수 있다.
+        - 네트워크 연결이 끊겨도 사용가능하다.
+    2. cdn 
+        - 네트워크가 연결돼 있어야 한다.
+        - IE는 버렸으니까 쓰지 않는게 좋다.
+        - cdn은 구글 검색한뒤에 원하는 버전으로 선택하면 된다. 
+- jQuery 선택자 
+    - $()안에 넣으면 된다. 
+- 다양한 사용구문 
+    - $().css
+    - $().value
+- 1. chaining방식
+     - 코드
+    ``` javascript
+        $('.welcome').html('hello world! Douzoneth2!')
+        .css('background-color', 'yellow')
+        .on('click', function(e) {
+            let clicked=e.target;
+            $(this).css('background-color','aqua');
+            })
             ```
-    - document 준비되면 바로 실행되게 하는 자바스크립트 함수 
-        1. $(document).ready(function(){}
-        2. document.addEventListener('DOMContentLoaded', function() {}
-        3. 
+- document 준비되면 바로 실행되게 하는 자바스크립트 함수 
+    1. $(document).ready(function(){}
+    2. document.addEventListener('DOMContentLoaded', function() {}
+
+- Ajax
+    - 비동기 방식의 자바스크립트
+    - 직관적이고 자연스런 사용자 상호액션 방식
+    - 화면의 일부분의 변경
+        - 기존 - 서버 요청, 대기, 전체화면 새로고침 
+            - 서버에 요청한 데이터가 도착할 때까지 클라이언트는 대기     
+        - AJAX – 업데이터가 필요한 부분만 변경
+            - 서버에 요청한 데이터가 도착 할 동안 클라이언트는 멈추지 않고 동작
+    - 구성요소
+        1. XMLHttpRequest 
+            - 자바스크립트 객체 대부분의 브라우져에서 지원
+            - Firefox, Opera, Safari, Mozilla
+            - 표준 HTTP방식(GET/POST) 으로 서버와 통신
+            - 서버와 통신시 비동기적으로 작업 
+            - 백그라운드에서 작업
+        2. 
+
+    
+    
 
 
 
